@@ -141,7 +141,18 @@ task-cli list in-progress
 if (!command) {
   console.error("No command provided. Use '--help' to see available commands.");
 } else {
-  console.error(
-    `Unknown command: ${command}. Use '--help' to see available commands.`
-  );
+  const validCommands = [
+    "add",
+    "update",
+    "delete",
+    "mark-in-progress",
+    "mark-done",
+    "list",
+    "--help",
+  ];
+  if (!validCommands.includes(command)) {
+    console.error(
+      `Invalid command: ${command}. Use '--help' to see available commands.`
+    );
+  }
 }
