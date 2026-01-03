@@ -4,6 +4,7 @@ import createTask from "../src/commands/create-task.js";
 import deleteTask from "../src/commands/delete-task.js";
 import updateTask from "../src/commands/update-task.js";
 import updateTaskStatus from "../src/commands/update-task-status.js";
+import listTasks from "../src/commands/list-task.js";
 
 console.log("Welcome to my CLI tool!");
 console.log("This tool helps you manage your projects efficiently.");
@@ -87,5 +88,26 @@ if (command == "mark-in-progress") {
       });
   } else {
     console.error("Please provide the task ID to update status.");
+  }
+}
+
+if (command == "list") {
+  const statusFilter = args[1] || null;
+  if (statusFilter && !["todo", "in-progress", "done"].includes(statusFilter)) {
+    console.error(
+      "Invalid status filter. Use 'todo', 'in-progress', or 'done'."
+    );
+  } else {
+    listTasks(statusFilter)
+      .then((tasks) => {
+        if (tasks && tasks.length > 0) {
+          console.log("Tasks:", tasks);
+        } else {
+          console.log("No tasks found.");
+        }
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+      });
   }
 }
