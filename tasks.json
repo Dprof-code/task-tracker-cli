@@ -14,13 +14,6 @@
     "updatedAt": "2026-01-03T02:42:16.164Z"
   },
   {
-    "id": "3",
-    "description": "visit a friend",
-    "status": "todo",
-    "createdAt": "2026-01-03T01:52:20.770Z",
-    "updatedAt": "2026-01-03T01:52:20.774Z"
-  },
-  {
     "id": "4",
     "description": "pray",
     "status": "todo",

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import createTask from "../src/commands/create-task.js";
+import deleteTask from "../src/commands/delete-task.js";
 import updateTask from "../src/commands/update-task.js";
 
 console.log("Welcome to my CLI tool!");
@@ -39,5 +40,21 @@ if (command == "update") {
       });
   } else {
     console.error("Please provide both task ID and new task description.");
+  }
+}
+
+if (command == "delete") {
+  const id = args[1];
+
+  if (id) {
+    deleteTask(id)
+      .then((message) => {
+        console.log(message);
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+      });
+  } else {
+    console.error("Please provide the task ID to delete.");
   }
 }
