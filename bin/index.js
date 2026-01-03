@@ -3,6 +3,7 @@
 import createTask from "../src/commands/create-task.js";
 import deleteTask from "../src/commands/delete-task.js";
 import updateTask from "../src/commands/update-task.js";
+import updateTaskStatus from "../src/commands/update-task-status.js";
 
 console.log("Welcome to my CLI tool!");
 console.log("This tool helps you manage your projects efficiently.");
@@ -56,5 +57,35 @@ if (command == "delete") {
       });
   } else {
     console.error("Please provide the task ID to delete.");
+  }
+}
+
+if (command == "mark-in-progress") {
+  const id = args[1];
+  const newStatus = "in-progress";
+  if (id) {
+    updateTaskStatus(id, newStatus)
+      .then((message) => {
+        console.log(message);
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+      });
+  } else {
+    console.error("Please provide the task ID to update status.");
+  }
+} else if (command == "mark-done") {
+  const id = args[1];
+  const newStatus = "done";
+  if (id) {
+    updateTaskStatus(id, newStatus)
+      .then((message) => {
+        console.log(message);
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+      });
+  } else {
+    console.error("Please provide the task ID to update status.");
   }
 }
