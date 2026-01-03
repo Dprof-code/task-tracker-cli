@@ -2,7 +2,7 @@
 
 ## Overview
 
-Task Tracker CLI is a high-performance, lightweight command-line utility built with **Node.js** for efficient task management. It provides a localized persistence layer using a JSON-based storage system, allowing developers to manage, track, and filter tasks without the overhead of a database server or a graphical interface.
+Task Tracker CLI is a high-performance, lightweight command-line utility built with **Node.js** for efficient task management. It provides a localized persistence layer using a JSON-based storage system, allowing developers to manage, track, and filter tasks without the overhead of a database server or a graphical interface. This project is the implementation of the task tracker project on [roadmap.sh](https://roadmap.sh/projects/task-tracker)
 
 ## Features
 
@@ -124,6 +124,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 - **GitHub**: [Dprof-code](https://github.com/Dprof-code)
 - **Twitter**: [@pr0devs](https://x.com/pr0devs)
+
 ---
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
