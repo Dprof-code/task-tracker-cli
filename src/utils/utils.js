@@ -34,4 +34,9 @@ async function taskExists(task) {
     return tasks.some(t => t.description.toLowerCase() === task.toLowerCase());
 }
 
-export { assignId, readTasks, writeTasks, taskExists };
+async function findTaskById(id) {
+    const tasks = await readTasks();
+    return tasks.find(t => t.id === id);
+}
+
+export { assignId, readTasks, writeTasks, taskExists, findTaskById };
