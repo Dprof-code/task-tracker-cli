@@ -12,7 +12,7 @@ async function updateTaskStatus(id, newStatus) {
         return {
           ...task,
           status: newStatus,
-          updatedAt: new Date().toISOString,
+          updatedAt: new Date().toISOString()
         };
       }
       return task;

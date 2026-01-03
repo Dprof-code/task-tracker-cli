@@ -15,14 +15,15 @@
   {
     "id": "4",
     "description": "pray",
-    "status": "done",
-    "createdAt": "2026-01-03T02:04:18.266Z"
+    "status": "in-progress",
+    "createdAt": "2026-01-03T02:04:18.266Z",
+    "updatedAt": "2026-01-03T12:23:57.799Z"
   },
   {
     "id": "5",
     "description": "study the bible",
-    "status": "todo",
+    "status": "in-progress",
     "createdAt": "2026-01-03T02:04:29.960Z",
-    "updatedAt": "2026-01-03T02:04:29.966Z"
+    "updatedAt": "2026-01-03T12:23:48.169Z"
   }
 ]
